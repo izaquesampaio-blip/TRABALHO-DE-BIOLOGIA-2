@@ -1,0 +1,60 @@
+import pygame
+import sys
+import random
+
+# --- Constants ---
+TILE_SIZE = 30
+SPEED = 2
+FPS = 60
+
+# Colors
+BLACK = (0, 0, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+
+# Directions
+UP = 0
+DOWN = 1
+LEFT = 2
+RIGHT = 3
+
+# Maze Layout (1 = Wall, 0 = Dot, ' ' = Empty Path)
+# 21 columns x 19 rows
+MAZE_LAYOUT = [
+    "111111111111111111111",
+    "100000000010000000001",
+    "101111101010101111101",
+    "100000100000001000001",
+    "101110101111101011101",
+    "100000000000000000001",
+    "101111101111101111101",
+    "100000100000001000001",
+    "111110101010101011111",
+    "111110100000001011111",
+    "111110101111101011111",
+    "100000000010000000001",
+    "101111101010101111101",
+    "100000100000001000001",
+    "101110101111101011101",
+    "100000000000000000001",
+    "101111101111101111101",
+    "100000000000000000001",
+    "111111111111111111111",
+]
+
+SCREEN_WIDTH = len(MAZE_LAYOUT[0]) * TILE_SIZE
+SCREEN_HEIGHT = len(MAZE_LAYOUT) * TILE_SIZE
+
+# --- Helper Functions ---
+def is_wall(col, row):
+    """Check if a specific grid coordinate is a wall."""
+    if 0 <= row < len(MAZE_LAYOUT) and 0 <= col < len(MAZE_LAYOUT[0]):
+        return MAZE_LAYOUT[row][col] == '1'
+    return True # Out of bounds is treated as a wall
+
+def can_move(x, y, direction):
+    """Check if an entity can move in a given direction from its current aligned position."""
+    cx, cy = x // TILE_SIZE, y // TILE_SIZE
+    if direction
