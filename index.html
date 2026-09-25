@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Trabalho acadêmico de Biologia sobre o tecido nervoso, seus componentes, organização e aplicações clínicas." />
+  <meta name="description" content="Trabalho acadêmico de Biologia sobre o tecido nervoso, sua organização, comunicação neural e aplicações clínicas." />
   <meta name="author" content="Estudante de Biologia" />
   <title>Trabalhando de Biologia: Tecido Nervoso</title>
   <link rel="stylesheet" href="style.css" />
@@ -11,7 +11,7 @@
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a href="#inicio" class="brand">🧠 Tecido Nervoso</a>
+      <a href="#inicio" class="brand">🧠 TECIDO NERVOSO</a>
       <nav aria-label="Menu principal">
         <ul>
           <li><a href="#intro">Introdução</a></li>
@@ -28,15 +28,16 @@
   <main id="inicio">
     <section class="academic-cover" aria-label="Capa do trabalho">
       <div class="container cover-content">
-        <span class="cover-institution">Trabalho acadêmico de Biologia</span>
+        <span class="cover-institution">Trabalho acadêmico de biologia</span>
         <div class="cover-rule"></div>
         <h1>Trabalhando de Biologia:<br /><strong>Tecido Nervoso</strong></h1>
-        <p class="cover-subtitle">Organização celular, comunicação neural e aplicações clínicas</p>
+        <p class="cover-subtitle">Organização celular, transmissão de impulsos e relevância clínica do sistema nervoso.</p>
         <div class="cover-meta">
-          <span>Biologia Celular e Histologia</span>
-          <span>Material de estudo</span>
+          <span>Biologia Celular</span>
+          <span>Histologia</span>
+          <span>Neurociência</span>
         </div>
-        <a href="#intro" class="btn btn-primary">Iniciar apresentação</a>
+        <a href="#intro" class="btn btn-primary">Explorar apresentação</a>
       </div>
     </section>
 
@@ -45,40 +46,267 @@
         <div class="hero-copy">
           <span class="eyebrow">Disciplina: Biologia Celular e Histologia</span>
           <h2>O tecido nervoso como sistema de comunicação</h2>
-          <p>O tecido nervoso recebe, integra e transmite informações. Sua organização permite perceber estímulos, processar sinais e produzir respostas coordenadas.</p>
-          <div class="hero-badges"><span>Neurônios</span><span>Glia</span><span>Sinapse</span><span>Impulso nervoso</span></div>
-          <div class="hero-actions"><a href="#intro" class="btn btn-primary">Explorar conteúdo</a><a href="#quiz" class="btn btn-secondary">Ver quiz</a></div>
+          <p>O tecido nervoso recebe, integra e transmite informações. Ele permite detectar estímulos, processar sinais e produzir respostas rápidas e coordenadas no organismo.</p>
+          <div class="hero-badges">
+            <span>Neurônios</span>
+            <span>Glia</span>
+            <span>Sinapse</span>
+            <span>Impulso nervoso</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#intro" class="btn btn-primary">Iniciar leitura</a>
+            <a href="#quiz" class="btn btn-secondary">Quiz de revisão</a>
+          </div>
         </div>
+
         <div class="hero-visual" aria-label="Ilustração detalhada de um neurônio">
           <svg viewBox="0 0 520 420" class="neuron-svg" role="img" aria-label="Neurônio com dendritos, corpo celular, axônio e mielina">
-            <defs><linearGradient id="axonGrad" x1="0%" x2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#4f46e5"/></linearGradient><linearGradient id="somaGrad" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#facc15"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs>
-            <path d="M180 135 C120 100,100 60,140 28 C175 0,225 10,260 80 C285 118,280 148,236 168" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/><path d="M180 160 C115 176,103 219,151 244 C191 264,210 260,234 238" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/><path d="M180 145 C135 128,86 145,55 185 C19 230,25 292,75 318 C104 334,139 328,168 294" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="250" cy="175" r="78" fill="url(#somaGrad)" stroke="#d97706" stroke-width="6"/><circle cx="250" cy="175" r="24" fill="#fef3c7" stroke="#d97706" stroke-width="4"/><circle cx="250" cy="175" r="8" fill="#1e293b"/><path d="M330 175 L470 175" stroke="url(#axonGrad)" stroke-width="12" stroke-linecap="round"/><path d="M470 175 L490 175" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/><g fill="#c4b5fd" opacity=".8"><circle cx="332" cy="175" r="10"/><circle cx="362" cy="175" r="10"/><circle cx="392" cy="175" r="10"/><circle cx="422" cy="175" r="10"/><circle cx="452" cy="175" r="10"/></g><text x="120" y="40" class="label-tag">Dendritos</text><text x="315" y="95" class="label-tag">Axônio</text><text x="130" y="325" class="label-tag">Corpo celular</text>
+            <defs>
+              <linearGradient id="axonGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#4f46e5"/>
+              </linearGradient>
+              <linearGradient id="somaGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#facc15"/>
+                <stop offset="100%" stop-color="#f59e0b"/>
+              </linearGradient>
+            </defs>
+
+            <path d="M180 135 C120 100,100 60,140 28 C175 0,225 10,260 80 C285 118,280 148,236 168" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/>
+            <path d="M180 160 C115 176,103 219,151 244 C191 264,210 260,234 238" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/>
+            <path d="M180 145 C135 128,86 145,55 185 C19 230,25 292,75 318 C104 334,139 328,168 294" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="250" cy="175" r="78" fill="url(#somaGrad)" stroke="#d97706" stroke-width="6"/>
+            <circle cx="250" cy="175" r="24" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>
+            <circle cx="250" cy="175" r="8" fill="#1e293b"/>
+            <path d="M330 175 L470 175" stroke="url(#axonGrad)" stroke-width="12" stroke-linecap="round"/>
+            <path d="M470 175 L490 175" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+            <g fill="#c4b5fd" opacity="0.8">
+              <circle cx="332" cy="175" r="10"/>
+              <circle cx="362" cy="175" r="10"/>
+              <circle cx="392" cy="175" r="10"/>
+              <circle cx="422" cy="175" r="10"/>
+              <circle cx="452" cy="175" r="10"/>
+            </g>
+            <text x="120" y="40" class="label-tag">Dendritos</text>
+            <text x="315" y="95" class="label-tag">Axônio</text>
+            <text x="130" y="325" class="label-tag">Corpo celular</text>
           </svg>
         </div>
       </div>
     </section>
 
-    <section class="section" id="intro"><div class="container"><span class="section-kicker">01 · Fundamentação</span><h2 class="section-title">Introdução</h2><div class="intro-grid"><div class="info-card"><h3>Função principal</h3><p>O tecido nervoso detecta estímulos sensoriais, processa informações e desencadeia respostas motoras, secretórias ou cognitivas.</p></div><div class="info-card"><h3>Composição</h3><p>É formado por neurônios e células da neuroglia, responsáveis por suporte estrutural, nutricional, elétrico e imunológico.</p></div><div class="info-card"><h3>Organização</h3><p>O sistema nervoso central integra informações; o sistema nervoso periférico transmite sinais entre o centro e o restante do corpo.</p></div></div></div></section>
+    <section class="section" id="intro">
+      <div class="container">
+        <span class="section-kicker">01 · Fundamentação</span>
+        <h2 class="section-title">Introdução</h2>
+        <div class="intro-grid">
+          <div class="info-card">
+            <h3>Função principal</h3>
+            <p>O tecido nervoso detecta estímulos sensoriais, processa informações e desencadeia respostas motoras, secretórias ou cognitivas.</p>
+          </div>
+          <div class="info-card">
+            <h3>Composição</h3>
+            <p>É formado por neurônios e células da neuroglia, responsáveis por suporte estrutural, nutricional, elétrico e imunológico.</p>
+          </div>
+          <div class="info-card">
+            <h3>Organização</h3>
+            <p>O sistema nervoso central integra informações, enquanto o periférico transmite sinais entre o centro e o restante do corpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section alt" id="neuronio"><div class="container"><span class="section-kicker">02 · Estrutura celular</span><h2 class="section-title">Neurônio: unidade funcional</h2><div class="two-columns"><div><p>O neurônio é especializado em receber, processar e conduzir sinais elétricos e químicos.</p><ul class="check-list"><li><strong>Dendritos:</strong> recebem estímulos e conduzem sinais ao corpo celular.</li><li><strong>Soma:</strong> contém o núcleo e coordena o metabolismo celular.</li><li><strong>Axônio:</strong> conduz o impulso até outra célula-alvo.</li><li><strong>Mielina:</strong> isola o axônio e acelera a transmissão.</li><li><strong>Terminações:</strong> liberam neurotransmissores na sinapse.</li></ul></div><div class="micro-panel"><h3>Tipos de neurônios</h3><div class="chip-grid"><span class="chip">Sensoriais</span><span class="chip">Motores</span><span class="chip">Associativos</span><span class="chip">Interneurônios</span></div><p>Neurônios sensoriais levam informações ao sistema nervoso central; motores conduzem respostas aos efetores; interneurônios conectam circuitos.</p></div></div></div></section>
+    <section class="section alt" id="neuronio">
+      <div class="container">
+        <span class="section-kicker">02 · Estrutura celular</span>
+        <h2 class="section-title">Neurônio: unidade funcional do sistema nervoso</h2>
+        <div class="two-columns">
+          <div>
+            <p>O neurônio é a unidade estrutural e funcional do tecido nervoso. Sua especialização permite receber, processar e conduzir sinais elétricos e químicos.</p>
+            <ul class="check-list">
+              <li><strong>Dendritos:</strong> recebem estímulos e conduzem o sinal para o corpo celular.</li>
+              <li><strong>Corpo celular (soma):</strong> contém o núcleo e coordena o metabolismo da célula.</li>
+              <li><strong>Axônio:</strong> conduz o impulso nervoso até outra célula-alvo.</li>
+              <li><strong>Bainha de mielina:</strong> isola eletricamente o axônio e acelera a transmissão.</li>
+              <li><strong>Terminações nervosas:</strong> liberam neurotransmissores na sinapse.</li>
+            </ul>
+          </div>
+          <div class="micro-panel">
+            <h3>Tipos de neurônios</h3>
+            <div class="chip-grid">
+              <span class="chip">Sensoriais</span>
+              <span class="chip">Motores</span>
+              <span class="chip">Associativos</span>
+              <span class="chip">Interneurônios</span>
+            </div>
+            <p>Neurônios sensoriais levam informações do ambiente ao sistema nervoso central; motores conduzem respostas aos efetores; interneurônios conectam diferentes circuitos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section" id="glia"><div class="container"><span class="section-kicker">03 · Neuroglia</span><h2 class="section-title">Células da glia</h2><div class="card-grid four-columns"><article class="mini-card"><div class="icon">⭐</div><h3>Astrócitos</h3><p>Participam da nutrição, proteção e manutenção do ambiente químico dos neurônios.</p></article><article class="mini-card"><div class="icon">🧵</div><h3>Oligodendrócitos</h3><p>Produzem mielina no sistema nervoso central.</p></article><article class="mini-card"><div class="icon">🛡️</div><h3>Células de Schwann</h3><p>Formam mielina e auxiliam na regeneração no sistema nervoso periférico.</p></article><article class="mini-card"><div class="icon">🧫</div><h3>Micróglia</h3><p>Exercem funções imunes, removendo resíduos e participando da defesa local.</p></article></div></div></section>
+    <section class="section" id="glia">
+      <div class="container">
+        <span class="section-kicker">03 · Neuroglia</span>
+        <h2 class="section-title">Células da glia</h2>
+        <div class="card-grid four-columns">
+          <article class="mini-card">
+            <div class="icon">⭐</div>
+            <h3>Astrócitos</h3>
+            <p>Participam da nutrição, suporte e manutenção do ambiente químico dos neurônios.</p>
+          </article>
+          <article class="mini-card">
+            <div class="icon">🧵</div>
+            <h3>Oligodendrócitos</h3>
+            <p>Produzem mielina no sistema nervoso central e favorecem a condução rápida.</p>
+          </article>
+          <article class="mini-card">
+            <div class="icon">🛡️</div>
+            <h3>Células de Schwann</h3>
+            <p>Formam a mielina no sistema nervoso periférico e auxiliam na regeneração axonal.</p>
+          </article>
+          <article class="mini-card">
+            <div class="icon">🧫</div>
+            <h3>Micróglia</h3>
+            <p>Exerce função imunológica, remove resíduos celulares e participa da defesa local.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <section class="section alt" id="sinapse"><div class="container"><span class="section-kicker">04 · Comunicação neural</span><h2 class="section-title">Sinapse e neurotransmissores</h2><div class="two-columns synapse-layout"><div class="synapse-box"><div class="synapse-visual" aria-label="Diagrama de uma sinapse"><div class="pre"><span>Axônio</span></div><div class="cleft"><div class="neurotransmitter t1"></div><div class="neurotransmitter t2"></div><div class="neurotransmitter t3"></div></div><div class="post"><span>Dendrito</span></div></div></div><div><p>A sinapse é a região especializada de contato entre um neurônio e outra célula. Na sinapse química, vesículas liberam neurotransmissores na fenda sináptica.</p><p>Os mensageiros ligam-se a receptores específicos da membrana pós-sináptica, gerando um novo sinal.</p><div class="fact-box"><strong>Exemplos:</strong> acetilcolina, dopamina, serotonina, glutamato e GABA.</div></div></div></div></section>
+    <section class="section alt" id="sinapse">
+      <div class="container">
+        <span class="section-kicker">04 · Comunicação neural</span>
+        <h2 class="section-title">Sinapse: ponte entre neurônios</h2>
+        <div class="two-columns synapse-layout">
+          <div class="synapse-box">
+            <div class="synapse-visual" aria-label="Diagrama de uma sinapse">
+              <div class="pre"><span>Axônio</span></div>
+              <div class="cleft">
+                <div class="neurotransmitter t1"></div>
+                <div class="neurotransmitter t2"></div>
+                <div class="neurotransmitter t3"></div>
+              </div>
+              <div class="post"><span>Dendrito</span></div>
+            </div>
+          </div>
+          <div>
+            <p>A sinapse é a região de contato entre duas células nervosas, ou entre um neurônio e outra célula efetora. Na maioria das sinapses, a transmissão ocorre de maneira química.</p>
+            <p>Quando o potencial de ação chega ao terminal axônico, vesículas sinápticas liberam neurotransmissores na fenda sináptica. Esses mensageiros ligam-se a receptores específicos da membrana pós-sináptica e geram novo sinal.</p>
+            <div class="fact-box"><strong>Exemplos:</strong> acetilcolina, dopamina, serotonina, glutamato e GABA.</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section" id="mielina"><div class="container"><span class="section-kicker">05 · Fisiologia</span><h2 class="section-title">Mielina e potencial de ação</h2><div class="two-columns"><div><p>O potencial de ação é uma alteração temporária do potencial elétrico da membrana neuronal que se propaga pelo axônio.</p><p>A bainha de mielina favorece a condução saltatória, fazendo o impulso “saltar” entre os nodos e aumentando a velocidade da resposta.</p></div><div class="signal-card"><div class="signal-line"><span class="signal-ball"></span></div><p><strong>Sem mielina:</strong> condução mais lenta.</p><p><strong>Com mielina:</strong> condução mais rápida e eficiente.</p></div></div></div></section>
+    <section class="section" id="mielina">
+      <div class="container">
+        <span class="section-kicker">05 · Fisiologia</span>
+        <h2 class="section-title">Mielina e potencial de ação</h2>
+        <div class="two-columns">
+          <div>
+            <p>O potencial de ação é uma variação temporária do potencial elétrico da membrana neuronal, permitindo a propagação do impulso ao longo do axônio.</p>
+            <p>A bainha de mielina atua como isolante elétrico e favorece a condução saltatória, em que o impulso “salta” de um nodo para outro e aumenta a velocidade da transmissão.</p>
+          </div>
+          <div class="signal-card">
+            <div class="signal-line"><span class="signal-ball"></span></div>
+            <p><strong>Sem mielina:</strong> condução mais lenta e menos eficiente.</p>
+            <p><strong>Com mielina:</strong> condução mais rápida, precisa e energética.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section alt" id="patologia"><div class="container"><span class="section-kicker">06 · Aplicação clínica</span><h2 class="section-title">Esclerose múltipla</h2><div class="case-box"><p>A esclerose múltipla é uma doença autoimune em que o sistema imunológico ataca a mielina do sistema nervoso central. A perda da bainha prejudica a condução e pode provocar fraqueza, dormência, alterações de coordenação e visão.</p><p>O caso evidencia a relação entre estrutura e função: sem mielina adequada, a mensagem neural não é conduzida com eficiência.</p></div></div></section>
+    <section class="section alt" id="patologia">
+      <div class="container">
+        <span class="section-kicker">06 · Aplicação clínica</span>
+        <h2 class="section-title">Esclerose múltipla</h2>
+        <div class="case-box">
+          <p>A esclerose múltipla é uma doença autoimune em que o sistema imunológico ataca a mielina do sistema nervoso central. Com a perda da bainha, a condução do impulso nervoso fica prejudicada, resultando em fraqueza muscular, dormência, dificuldade de coordenação e alterações visuais.</p>
+          <p>Esse exemplo mostra diretamente a relação entre estrutura e função: a integridade da mielina é essencial para a eficiência da comunicação neuronal.</p>
+        </div>
+      </div>
+    </section>
 
-    <section class="section conclusion" id="conclusao"><div class="container"><span class="section-kicker">07 · Síntese</span><h2 class="section-title">Conclusão</h2><div class="conclusion-box"><p>O tecido nervoso apresenta uma organização altamente especializada. Neurônios realizam a comunicação elétrica e química, enquanto as células da glia garantem suporte, proteção e equilíbrio funcional. A compreensão da mielina, do potencial de ação e das sinapses permite relacionar os mecanismos celulares às respostas do organismo e às manifestações de doenças neurológicas.</p></div></div></section>
+    <section class="section conclusion" id="conclusao">
+      <div class="container">
+        <span class="section-kicker">07 · Síntese</span>
+        <h2 class="section-title">Conclusão</h2>
+        <div class="conclusion-box">
+          <p>O tecido nervoso apresenta uma organização altamente especializada. Neurônios realizam a comunicação elétrica e química, enquanto as células da glia garantem suporte, proteção e manutenção do ambiente funcional. A compreensão da mielina, do potencial de ação e das sinapses permite relacionar os mecanismos celulares às respostas do organismo e às manifestações de doenças neurológicas.</p>
+        </div>
+      </div>
+    </section>
 
-    <section class="section references"><div class="container"><span class="section-kicker">08 · Referências</span><h2 class="section-title">Referências bibliográficas</h2><ol class="reference-list"><li>JUNQUEIRA, L. C.; CARNEIRO, J. <em>Histologia Básica: texto e atlas</em>. Rio de Janeiro: Guanabara Koogan.</li><li>ALBERTS, B. et al. <em>Biologia Molecular da Célula</em>. Porto Alegre: Artmed.</li><li>BEAR, M. F.; CONNORS, B. W.; PARADISO, M. A. <em>Neurociências: desvendando o sistema nervoso</em>. Porto Alegre: Artmed.</li></ol></div></section>
+    <section class="section references">
+      <div class="container">
+        <span class="section-kicker">08 · Referências</span>
+        <h2 class="section-title">Referências bibliográficas</h2>
+        <ol class="reference-list">
+          <li>JUNQUEIRA, L. C.; CARNEIRO, J. <em>Histologia Básica: texto e atlas</em>. Rio de Janeiro: Guanabara Koogan.</li>
+          <li>ALBERTS, B. et al. <em>Biologia Molecular da Célula</em>. Porto Alegre: Artmed.</li>
+          <li>BEAR, M. F.; CONNORS, B. W.; PARADISO, M. A. <em>Neurociências: desvendando o sistema nervoso</em>. Porto Alegre: Artmed.</li>
+        </ol>
+      </div>
+    </section>
 
-    <section class="section" id="quiz"><div class="container"><span class="section-kicker">09 · Avaliação</span><h2 class="section-title">Quiz de revisão</h2><form class="quiz-card" id="quizForm"><div class="question"><p>1. Qual é a principal função dos dendritos?</p><label><input type="radio" name="q1" value="0" /> Produzir neurotransmissores</label><label><input type="radio" name="q1" value="1" /> Receber estímulos e conduzir sinais ao corpo celular</label><label><input type="radio" name="q1" value="0" /> Isolar o axônio</label></div><div class="question"><p>2. Qual estrutura acelera a condução do impulso?</p><label><input type="radio" name="q2" value="0" /> Núcleo</label><label><input type="radio" name="q2" value="1" /> Bainha de mielina</label><label><input type="radio" name="q2" value="0" /> Membrana plasmática</label></div><div class="question"><p>3. O que ocorre em uma sinapse química?</p><label><input type="radio" name="q3" value="0" /> O axônio se divide</label><label><input type="radio" name="q3" value="1" /> Neurotransmissores são liberados e atuam em receptores</label><label><input type="radio" name="q3" value="0" /> O núcleo migra para o dendrito</label></div><div class="question"><p>4. Quem produz mielina no sistema nervoso periférico?</p><label><input type="radio" name="q4" value="0" /> Astrócito</label><label><input type="radio" name="q4" value="1" /> Célula de Schwann</label><label><input type="radio" name="q4" value="0" /> Micróglia</label></div><div class="question"><p>5. Por que a esclerose múltipla prejudica a função nervosa?</p><label><input type="radio" name="q5" value="0" /> Porque aumenta a atividade mitocondrial</label><label><input type="radio" name="q5" value="1" /> Porque destrói a mielina e prejudica a condução</label><label><input type="radio" name="q5" value="0" /> Porque reduz proteínas do núcleo</label></div><div class="quiz-actions"><button type="submit" class="btn btn-primary">Corrigir</button><button type="button" class="btn btn-secondary" id="resetQuiz">Reiniciar</button></div><div id="resultQuiz" class="quiz-result" aria-live="polite"></div></form></div></section>
+    <section class="section" id="quiz">
+      <div class="container">
+        <span class="section-kicker">09 · Avaliação</span>
+        <h2 class="section-title">Quiz de revisão</h2>
+        <form class="quiz-card" id="quizForm">
+          <div class="question">
+            <p>1. Qual é a principal função dos dendritos?</p>
+            <label><input type="radio" name="q1" value="0" /> Produzir neurotransmissores</label>
+            <label><input type="radio" name="q1" value="1" /> Receber estímulos e conduzir sinais ao corpo celular</label>
+            <label><input type="radio" name="q1" value="0" /> Isolar o axônio</label>
+          </div>
+
+          <div class="question">
+            <p>2. Qual estrutura acelera a condução do impulso nervoso?</p>
+            <label><input type="radio" name="q2" value="0" /> Núcleo</label>
+            <label><input type="radio" name="q2" value="1" /> Bainha de mielina</label>
+            <label><input type="radio" name="q2" value="0" /> Membrana plasmática</label>
+          </div>
+
+          <div class="question">
+            <p>3. O que ocorre em uma sinapse química?</p>
+            <label><input type="radio" name="q3" value="0" /> O axônio se divide em duas partes</label>
+            <label><input type="radio" name="q3" value="1" /> Neurotransmissores são liberados e atuam em receptores da célula seguinte</label>
+            <label><input type="radio" name="q3" value="0" /> O núcleo é transportado para o dendrito</label>
+          </div>
+
+          <div class="question">
+            <p>4. Qual célula é responsável pela produção de mielina no sistema nervoso periférico?</p>
+            <label><input type="radio" name="q4" value="0" /> Astrócito</label>
+            <label><input type="radio" name="q4" value="1" /> Célula de Schwann</label>
+            <label><input type="radio" name="q4" value="0" /> Micróglia</label>
+          </div>
+
+          <div class="question">
+            <p>5. Por que a esclerose múltipla prejudica a função nervosa?</p>
+            <label><input type="radio" name="q5" value="0" /> Porque aumenta a atividade das mitocôndrias</label>
+            <label><input type="radio" name="q5" value="1" /> Porque destrói a mielina e prejudica a condução do impulso</label>
+            <label><input type="radio" name="q5" value="0" /> Porque reduz a produção do núcleo celular</label>
+          </div>
+
+          <div class="quiz-actions">
+            <button type="submit" class="btn btn-primary">Corrigir</button>
+            <button type="button" class="btn btn-secondary" id="resetQuiz">Reiniciar</button>
+          </div>
+          <div id="resultQuiz" class="quiz-result" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer"><div class="container footer-content"><p>Trabalho acadêmico de Biologia · Tecido Nervoso</p><p>Material desenvolvido para fins educacionais.</p></div></footer>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Trabalho acadêmico de Biologia · Tecido Nervoso</p>
+      <p>Material desenvolvido para fins educacionais.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
