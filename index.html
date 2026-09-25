@@ -4,49 +4,284 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aula interativa de Biologia sobre o tecido nervoso.">
-  <title>Tecido Nervoso | Biologia</title>
-  <style>
-    :root{--primary:#4f46e5;--secondary:#7c3aed;--cyan:#0891b2;--ink:#1e293b;--muted:#64748b;--bg:#f5f7ff;--card:#fff;--border:#e2e8f0;--success:#15803d;--danger:#b91c1c;--shadow:0 10px 30px #1e293b18}
-    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:var(--ink);background:var(--bg)} a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer}
-    .nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 7%;background:#fffffff2;border-bottom:1px solid var(--border);backdrop-filter:blur(10px)} .logo{font-size:1.25rem;font-weight:800;color:var(--primary)} .nav ul{display:flex;flex-wrap:wrap;gap:1rem;list-style:none;font-size:.9rem;font-weight:700}.nav a:hover{color:var(--primary)}
-    .hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem;min-height:540px;padding:5rem 8%;color:#fff;background:linear-gradient(135deg,#312e81,#6d28d9 55%,#0891b2)} .hero h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.05}.hero h2{margin:1rem 0;color:#e0e7ff;font-weight:500}.hero p{max-width:580px;margin-bottom:2rem;color:#eef2ff;font-size:1.1rem}.btn{display:inline-block;padding:.8rem 1.3rem;border:0;border-radius:999px;font-weight:700;transition:.25s}.btn-primary{color:#fff;background:var(--primary);box-shadow:0 8px 18px #4f46e54d}.hero .btn-primary{background:#fff;color:var(--primary)}.btn:hover{transform:translateY(-3px)}
-    .hero-art{display:flex;justify-content:center;align-items:center;min-height:280px}.neuron-art{position:relative;width:280px;height:210px;animation:float 4s ease-in-out infinite}.neuron-art:before{content:'◉';position:absolute;top:65px;left:105px;z-index:2;display:grid;place-items:center;width:75px;height:75px;border:7px solid #fef08a;border-radius:50%;color:#92400e;background:#facc15;font-size:2rem;box-shadow:0 0 30px #facc1580}.neuron-art:after{content:'';position:absolute;top:101px;left:170px;width:105px;height:10px;border-radius:10px;background:#67e8f9;box-shadow:30px 0 #67e8f9}.branch{position:absolute;left:10px;width:125px;height:8px;border-radius:8px;background:#c4b5fd;transform-origin:right}.b1{top:85px;transform:rotate(-35deg)}.b2{top:125px;transform:rotate(-5deg)}.b3{top:165px;transform:rotate(28deg)}@keyframes float{50%{transform:translateY(-12px)}}
-    section{padding:4.5rem 8%}.title{text-align:center;color:var(--primary);font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:.6rem}.subtitle{max-width:700px;margin:0 auto 2.2rem;text-align:center;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}.card,.tab-panel,.quiz,.case{padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}.card{transition:.25s}.card:hover{transform:translateY(-5px)}.card h3{margin-bottom:.5rem;color:var(--primary)}.card p{color:var(--muted)}.icon{font-size:2rem;margin-bottom:.5rem}.objectives{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:900px;margin:auto}.objective{padding:1rem 1.2rem;background:#fff;border-left:5px solid var(--cyan);border-radius:10px;box-shadow:0 5px 16px #0f172a12}.objective:before{content:'✓';margin-right:.6rem;color:var(--success);font-weight:bold}
-    .content-section{background:#eef2ff}.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.5rem}.tab{padding:.7rem 1rem;border:1px solid var(--border);border-radius:999px;background:#fff;font-weight:bold}.tab.active,.tab:hover{color:#fff;background:var(--primary);border-color:var(--primary)}.tab-panel{display:none;max-width:850px;margin:auto;animation:show .3s}.tab-panel.active{display:block}@keyframes show{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-    .diagram{position:relative;max-width:900px;height:280px;margin:1.5rem auto;padding:1rem;overflow:hidden;background:#fff;border:2px dashed #a5b4fc;border-radius:18px}.body-cell{position:absolute;top:95px;left:40%;z-index:2;display:grid;place-items:center;width:90px;height:90px;border:6px solid #f59e0b;border-radius:50%;background:#facc15;font-size:.75rem;font-weight:bold;text-align:center}.axon{position:absolute;top:134px;left:49%;width:40%;height:13px;border-radius:10px;background:var(--primary)}.dendrite{position:absolute;left:25%;width:125px;height:7px;border-radius:8px;background:var(--secondary);transform-origin:right}.d1{top:105px;transform:rotate(-25deg)}.d2{top:137px;transform:rotate(8deg)}.d3{top:170px;transform:rotate(28deg)}.myelin{position:absolute;top:-12px;width:60px;height:38px;border:4px solid #22d3ee;border-radius:20px;background:#cffafe}.m1{left:18px}.m2{left:95px}.m3{left:172px}.m4{left:249px}.label{position:absolute;padding:.3rem .6rem;border:1px solid #fbbf24;border-radius:7px;background:#fef3c7;font-size:.75rem;font-weight:bold}
-    .glia{grid-template-columns:repeat(4,1fr)}.synapse{text-align:center}.animation{position:relative;display:flex;justify-content:space-around;align-items:center;height:150px;margin:1.5rem 0;overflow:hidden;background:#f8fafc;border-radius:12px}.terminal{width:145px;height:55px;border-radius:50%;background:var(--primary)}.cleft{width:70px;height:5px;background:#ef4444}.dot{position:absolute;width:12px;height:12px;border-radius:50%;background:#facc15;opacity:0}.animation.play .dot{animation:cross 2s linear infinite}@keyframes cross{0%{left:35%;opacity:0}20%,80%{opacity:1}100%{left:65%;opacity:0}}
-    .track{height:17px;margin:1.5rem 0;overflow:hidden;border-radius:20px;background:#cbd5e1}.track:after{content:'';display:block;width:12%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--cyan),var(--primary));transform:translateX(-100%)}.track.active:after{animation:move 2.5s linear infinite}@keyframes move{to{transform:translateX(900%)}}
-    .case{max-width:900px;margin:auto;border-left:7px solid #f59e0b;background:linear-gradient(135deg,#fff7ed,#fef3c7)}.case h3{color:#b45309;margin-bottom:.7rem}.answer{display:none;margin-top:1rem;padding:1rem;color:#166534;background:#dcfce7;border-radius:9px}.answer.show{display:block}
-    .quiz{max-width:850px;margin:auto}.question{padding-bottom:1.3rem;margin-bottom:1.3rem;border-bottom:1px solid var(--border)}.question h3{margin-bottom:.7rem;color:var(--primary)}.option{display:block;padding:.7rem 1rem;margin:.5rem 0;border:1px solid var(--border);border-radius:9px;background:#f8fafc;cursor:pointer}.option:hover{border-color:var(--primary);background:#eef2ff}.option input{margin-right:.5rem;accent-color:var(--primary)}.correct{border-color:var(--success)!important;background:#dcfce7!important}.incorrect{border-color:var(--danger)!important;background:#fee2e2!important}.result{margin-top:1rem;padding:1rem;text-align:center;font-weight:bold;background:#eef2ff;border-radius:9px}
-    .summary{background:#eef2ff}.summary ul,.refs ul{max-width:800px;margin:auto;padding-left:1.3rem}.summary li,.refs li{margin:.6rem 0}footer{padding:2rem;text-align:center;color:#e0e7ff;background:#1e1b4b}
-    :focus-visible{outline:3px solid #facc15;outline-offset:3px}@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.grid,.glia{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.nav{flex-direction:column}.nav ul{justify-content:center;font-size:.8rem}.hero{padding:4rem 5%}section{padding:3.5rem 5%}.grid,.objectives,.glia{grid-template-columns:1fr}.diagram{transform:scale(.75);transform-origin:top center;margin-bottom:-65px}}
-  </style>
+  <title>Trabalhando de Biologia: Tecido Nervoso</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav"><a class="logo" href="#inicio">🧠 Tecido Nervoso</a><nav aria-label="Navegação principal"><ul><li><a href="#objetivos">Objetivos</a></li><li><a href="#conteudo">Conteúdo</a></li><li><a href="#atividade">Atividade</a></li><li><a href="#resumo">Resumo</a></li></ul></nav></header>
+  <header class="nav">
+    <a class="logo" href="#inicio">🧠 Tecido Nervoso</a>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#conteudo">Conteúdo</a></li>
+        <li><a href="#atividade">Atividade</a></li>
+        <li><a href="#resumo">Resumo</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <section class="hero" id="inicio"><div><h1>Tecido Nervoso</h1><h2>Biologia · Histologia Animal</h2><p>Compreenda como neurônios, células da glia e sinapses coordenam as respostas do organismo.</p><a class="btn btn-primary" href="#objetivos">Começar aula</a></div><div class="hero-art" aria-label="Ilustração de um neurônio"><div class="neuron-art"><i class="branch b1"></i><i class="branch b2"></i><i class="branch b3"></i></div></div></section>
-    <section id="objetivos"><h2 class="title">Objetivos de aprendizagem</h2><p class="subtitle">Ao final desta aula, você deverá ser capaz de:</p><div class="objectives"><div class="objective">Compreender a função do tecido nervoso.</div><div class="objective">Identificar neurônios e células da glia.</div><div class="objective">Reconhecer as partes de um neurônio.</div><div class="objective">Explicar o conceito básico de sinapse.</div><div class="objective">Relacionar a mielina à velocidade do impulso.</div><div class="objective">Entender a desmielinização na Esclerose Múltipla.</div></div></section>
-    <section class="content-section" id="conteudo"><h2 class="title">Conteúdo programático</h2><div class="tabs"><button class="tab active" data-tab="funcao">Função</button><button class="tab" data-tab="neuronios">Neurônios</button><button class="tab" data-tab="glia">Células da glia</button><button class="tab" data-tab="sinapse">Sinapse</button><button class="tab" data-tab="impulso">Impulso nervoso</button></div><div class="tab-panel active" id="funcao"><h3>Função geral</h3><p>O tecido nervoso recebe estímulos, integra informações e produz respostas, permitindo comunicação rápida entre diferentes partes do organismo.</p></div><div class="tab-panel" id="neuronios"><h3>Neurônios</h3><p>São células especializadas na recepção e transmissão de sinais. Podem ser sensoriais (aferentes), motores (eferentes) ou interneurônios.</p></div><div class="tab-panel" id="glia"><h3>Células da glia</h3><p>Fornecem suporte, nutrição, proteção e defesa aos neurônios. São essenciais para o funcionamento do sistema nervoso.</p></div><div class="tab-panel" id="sinapse"><h3>Sinapse</h3><p>É a região de comunicação entre células. Neurotransmissores atravessam a fenda sináptica e levam a mensagem ao próximo neurônio.</p></div><div class="tab-panel" id="impulso"><h3>Impulso nervoso</h3><p>É uma alteração elétrica que percorre a membrana do neurônio. A mielina acelera sua condução, funcionando como um isolante.</p></div></section>
-    <section><h2 class="title">Estrutura do neurônio</h2><p class="subtitle">O impulso geralmente segue dos dendritos para o corpo celular e depois pelo axônio.</p><div class="diagram" aria-label="Esquema simplificado de um neurônio"><i class="dendrite d1"></i><i class="dendrite d2"></i><i class="dendrite d3"></i><div class="body-cell">Corpo celular<br>+ núcleo</div><div class="axon"><i class="myelin m1"></i><i class="myelin m2"></i><i class="myelin m3"></i><i class="myelin m4"></i></div><span class="label" style="top:35px;left:23%">Dendritos</span><span class="label" style="top:78px;left:40%">Corpo celular</span><span class="label" style="top:205px;left:67%">Axônio e mielina</span></div></section>
-    <section class="content-section"><h2 class="title">Células da glia</h2><div class="grid glia"><article class="card"><div class="icon">🌟</div><h3>Astrócitos</h3><p>Dão suporte e ajudam a manter o ambiente dos neurônios.</p></article><article class="card"><div class="icon">🧵</div><h3>Oligodendrócitos</h3><p>Produzem mielina no sistema nervoso central.</p></article><article class="card"><div class="icon">🛡️</div><h3>Células de Schwann</h3><p>Produzem mielina no sistema nervoso periférico.</p></article><article class="card"><div class="icon">🔰</div><h3>Micróglia</h3><p>Atuam na defesa e proteção do tecido nervoso.</p></article></div></section>
-    <section><h2 class="title">Sinapse</h2><div class="card synapse"><p>Na sinapse, o sinal elétrico estimula a liberação de neurotransmissores, que atravessam a fenda sináptica.</p><div class="animation" id="synapseAnimation"><div class="terminal"></div><div class="cleft"></div><div class="terminal"></div><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><button class="btn btn-primary" id="animateSynapse">Iniciar animação</button></div></section>
-    <section class="content-section"><h2 class="title">Impulso nervoso</h2><p class="subtitle">Acompanhe uma representação simplificada da mensagem viajando pelo axônio.</p><div class="card"><p>O impulso envolve mudanças no estado elétrico da membrana: repouso, despolarização e repolarização.</p><div class="track" id="impulseTrack"></div><button class="btn btn-primary" id="animateImpulse">Iniciar impulso</button></div></section>
-    <section><div class="case"><h3>Estudo de caso: Esclerose Múltipla</h3><p>A doença pode danificar a bainha de mielina. Como consequência, os impulsos nervosos podem ficar lentos ou ser interrompidos.</p><p><strong>Por que isso prejudica os movimentos e a sensibilidade?</strong></p><button class="btn btn-primary" id="showAnswer">Mostrar resposta</button><div class="answer" id="answer">A destruição da mielina dificulta ou interrompe a transmissão dos impulsos, prejudicando a comunicação entre o sistema nervoso e o corpo.</div></div></section>
-    <section id="atividade" class="content-section"><h2 class="title">Quiz de fixação</h2><form class="quiz" id="quiz"><div class="question"><h3>1. Qual é a função dos dendritos?</h3><label class="option"><input type="radio" name="q1" value="0"> Produzir mielina.</label><label class="option"><input type="radio" name="q1" value="1"> Receber estímulos.</label><label class="option"><input type="radio" name="q1" value="0"> Defender o tecido nervoso.</label></div><div class="question"><h3>2. Qual estrutura conduz o impulso para longe do corpo celular?</h3><label class="option"><input type="radio" name="q2" value="0"> Dendrito.</label><label class="option"><input type="radio" name="q2" value="1"> Axônio.</label><label class="option"><input type="radio" name="q2" value="0"> Núcleo.</label></div><div class="question"><h3>3. Quem produz mielina no sistema nervoso periférico?</h3><label class="option"><input type="radio" name="q3" value="1"> Célula de Schwann.</label><label class="option"><input type="radio" name="q3" value="0"> Micróglia.</label><label class="option"><input type="radio" name="q3" value="0"> Astrócito.</label></div><div class="question"><h3>4. O que ocorre em uma sinapse?</h3><label class="option"><input type="radio" name="q4" value="1"> A mensagem passa com participação de neurotransmissores.</label><label class="option"><input type="radio" name="q4" value="0"> O neurônio se divide.</label><label class="option"><input type="radio" name="q4" value="0"> O núcleo desaparece.</label></div><div class="question"><h3>5. O que pode ocorrer com a destruição da mielina?</h3><label class="option"><input type="radio" name="q5" value="1"> O impulso pode ficar lento ou ser interrompido.</label><label class="option"><input type="radio" name="q5" value="0"> O impulso fica sempre mais rápido.</label><label class="option"><input type="radio" name="q5" value="0"> A sinapse deixa de existir imediatamente.</label></div><button class="btn btn-primary" type="submit">Corrigir quiz</button> <button class="btn" type="button" id="resetQuiz">Reiniciar</button><div class="result" id="result" aria-live="polite"></div></form></section>
-    <section class="summary" id="resumo"><h2 class="title">Resumo da aula</h2><ul><li>O tecido nervoso permite comunicação, integração e resposta a estímulos.</li><li>O neurônio é a principal célula funcional do tecido nervoso.</li><li>A glia oferece suporte, proteção, nutrição e defesa.</li><li>A sinapse permite a comunicação entre células.</li><li>A mielina aumenta a velocidade do impulso nervoso.</li></ul></section>
-    <section class="refs"><h2 class="title">Referências</h2><ul><li>Amabis e Martho – <em>Biologia em Contexto</em>.</li><li>Linhares e Gewandsznajder – <em>Biologia Hoje</em>.</li><li>Junqueira e Carneiro – <em>Histologia Básica</em>.</li></ul></section>
+    <section class="hero" id="inicio">
+      <div>
+        <h1>Tecido Nervoso</h1>
+        <h2>Biologia · Histologia Animal</h2>
+        <p>Compreenda como neurônios, células da glia e sinapses coordenam as respostas do organismo.</p>
+        <a class="btn btn-primary" href="#objetivos">Começar aula</a>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de um neurônio">
+        <div class="neuron-art">
+          <i class="branch b1"></i>
+          <i class="branch b2"></i>
+          <i class="branch b3"></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="objetivos">
+      <h2 class="title">Objetivos de aprendizagem</h2>
+      <p class="subtitle">Ao final desta aula, você deverá ser capaz de:</p>
+      <div class="objectives">
+        <div class="objective">Compreender a função do tecido nervoso.</div>
+        <div class="objective">Identificar neurônios e células da glia.</div>
+        <div class="objective">Reconhecer as partes de um neurônio.</div>
+        <div class="objective">Explicar o conceito básico de sinapse.</div>
+        <div class="objective">Relacionar a mielina à velocidade do impulso.</div>
+        <div class="objective">Entender a desmielinização na Esclerose Múltipla.</div>
+      </div>
+    </section>
+
+    <section class="content-section" id="conteudo">
+      <h2 class="title">Conteúdo programático</h2>
+      <div class="tabs">
+        <button class="tab active" data-tab="funcao">Função</button>
+        <button class="tab" data-tab="neuronios">Neurônios</button>
+        <button class="tab" data-tab="glia">Células da glia</button>
+        <button class="tab" data-tab="sinapse">Sinapse</button>
+        <button class="tab" data-tab="impulso">Impulso nervoso</button>
+      </div>
+
+      <div class="tab-panel active" id="funcao">
+        <h3>Função geral</h3>
+        <p>O tecido nervoso recebe estímulos, integra informações e produz respostas, permitindo comunicação rápida entre diferentes partes do organismo.</p>
+      </div>
+
+      <div class="tab-panel" id="neuronios">
+        <h3>Neurônios</h3>
+        <p>São células especializadas na recepção e transmissão de sinais. Podem ser sensoriais (aferentes), motores (eferentes) ou interneurônios.</p>
+      </div>
+
+      <div class="tab-panel" id="glia">
+        <h3>Células da glia</h3>
+        <p>Fornecem suporte, nutrição, proteção e defesa aos neurônios. São essenciais para o funcionamento do sistema nervoso.</p>
+      </div>
+
+      <div class="tab-panel" id="sinapse">
+        <h3>Sinapse</h3>
+        <p>É a região de comunicação entre células. Neurotransmissores atravessam a fenda sináptica e levam a mensagem ao próximo neurônio.</p>
+      </div>
+
+      <div class="tab-panel" id="impulso">
+        <h3>Impulso nervoso</h3>
+        <p>É uma alteração elétrica que percorre a membrana do neurônio. A mielina acelera sua condução, funcionando como um isolante.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">Estrutura do neurônio</h2>
+      <p class="subtitle">O impulso geralmente segue dos dendritos para o corpo celular e depois pelo axônio.</p>
+      <div class="diagram" aria-label="Esquema simplificado de um neurônio">
+        <i class="dendrite d1"></i>
+        <i class="dendrite d2"></i>
+        <i class="dendrite d3"></i>
+        <div class="body-cell">Corpo celular<br>+ núcleo</div>
+        <div class="axon">
+          <i class="myelin m1"></i>
+          <i class="myelin m2"></i>
+          <i class="myelin m3"></i>
+          <i class="myelin m4"></i>
+        </div>
+        <span class="label" style="top:35px;left:23%">Dendritos</span>
+        <span class="label" style="top:78px;left:40%">Corpo celular</span>
+        <span class="label" style="top:205px;left:67%">Axônio e mielina</span>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="title">Células da glia</h2>
+      <div class="grid glia">
+        <article class="card">
+          <div class="icon">🌟</div>
+          <h3>Astrócitos</h3>
+          <p>Dão suporte e ajudam a manter o ambiente dos neurônios.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧵</div>
+          <h3>Oligodendrócitos</h3>
+          <p>Produzem mielina no sistema nervoso central.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h3>Células de Schwann</h3>
+          <p>Produzem mielina no sistema nervoso periférico.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔰</div>
+          <h3>Micróglia</h3>
+          <p>Atuam na defesa e proteção do tecido nervoso.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">Sinapse</h2>
+      <div class="card synapse">
+        <p>Na sinapse, o sinal elétrico estimula a liberação de neurotransmissores, que atravessam a fenda sináptica.</p>
+        <div class="animation" id="synapseAnimation">
+          <div class="terminal"></div>
+          <div class="cleft"></div>
+          <div class="terminal"></div>
+          <i class="dot"></i>
+          <i class="dot"></i>
+          <i class="dot"></i>
+        </div>
+        <button class="btn btn-primary" id="animateSynapse">Iniciar animação</button>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="title">Impulso nervoso</h2>
+      <p class="subtitle">Acompanhe uma representação simplificada da mensagem viajando pelo axônio.</p>
+      <div class="card">
+        <p>O impulso envolve mudanças no estado elétrico da membrana: repouso, despolarização e repolarização.</p>
+        <div class="track" id="impulseTrack"></div>
+        <button class="btn btn-primary" id="animateImpulse">Iniciar impulso</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="case">
+        <h3>Estudo de caso: Esclerose Múltipla</h3>
+        <p>A doença pode danificar a bainha de mielina. Como consequência, os impulsos nervosos podem ficar lentos ou ser interrompidos.</p>
+        <p><strong>Por que isso prejudica os movimentos e a sensibilidade?</strong></p>
+        <button class="btn btn-primary" id="showAnswer">Mostrar resposta</button>
+        <div class="answer" id="answer">A destruição da mielina dificulta ou interrompe a transmissão dos impulsos, prejudicando a comunicação entre o sistema nervoso e o corpo.</div>
+      </div>
+    </section>
+
+    <section id="atividade" class="content-section">
+      <h2 class="title">Quiz de fixação</h2>
+      <form class="quiz" id="quiz">
+        <div class="question">
+          <h3>1. Qual é a função dos dendritos?</h3>
+          <label class="option"><input type="radio" name="q1" value="0"> Produzir mielina.</label>
+          <label class="option"><input type="radio" name="q1" value="1"> Receber estímulos.</label>
+          <label class="option"><input type="radio" name="q1" value="0"> Defender o tecido nervoso.</label>
+        </div>
+
+        <div class="question">
+          <h3>2. Qual estrutura conduz o impulso para longe do corpo celular?</h3>
+          <label class="option"><input type="radio" name="q2" value="0"> Dendrito.</label>
+          <label class="option"><input type="radio" name="q2" value="1"> Axônio.</label>
+          <label class="option"><input type="radio" name="q2" value="0"> Núcleo.</label>
+        </div>
+
+        <div class="question">
+          <h3>3. Quem produz mielina no sistema nervoso periférico?</h3>
+          <label class="option"><input type="radio" name="q3" value="1"> Célula de Schwann.</label>
+          <label class="option"><input type="radio" name="q3" value="0"> Micróglia.</label>
+          <label class="option"><input type="radio" name="q3" value="0"> Astrócito.</label>
+        </div>
+
+        <div class="question">
+          <h3>4. O que ocorre em uma sinapse?</h3>
+          <label class="option"><input type="radio" name="q4" value="1"> A mensagem passa com participação de neurotransmissores.</label>
+          <label class="option"><input type="radio" name="q4" value="0"> O neurônio se divide.</label>
+          <label class="option"><input type="radio" name="q4" value="0"> O núcleo desaparece.</label>
+        </div>
+
+        <div class="question">
+          <h3>5. O que pode ocorrer com a destruição da mielina?</h3>
+          <label class="option"><input type="radio" name="q5" value="1"> O impulso pode ficar lento ou ser interrompido.</label>
+          <label class="option"><input type="radio" name="q5" value="0"> O impulso fica sempre mais rápido.</label>
+          <label class="option"><input type="radio" name="q5" value="0"> A sinapse deixa de existir imediatamente.</label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Corrigir quiz</button>
+        <button class="btn" type="button" id="resetQuiz">Reiniciar</button>
+        <div class="result" id="result" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="summary" id="resumo">
+      <h2 class="title">Resumo da aula</h2>
+      <ul>
+        <li>O tecido nervoso permite comunicação, integração e resposta a estímulos.</li>
+        <li>O neurônio é a principal célula funcional do tecido nervoso.</li>
+        <li>A glia oferece suporte, proteção, nutrição e defesa.</li>
+        <li>A sinapse permite a comunicação entre células.</li>
+        <li>A mielina aumenta a velocidade do impulso nervoso.</li>
+      </ul>
+    </section>
+
+    <section class="refs">
+      <h2 class="title">Referências</h2>
+      <ul>
+        <li>Amabis e Martho – <em>Biologia em Contexto</em>.</li>
+        <li>Linhares e Gewandsznajder – <em>Biologia Hoje</em>.</li>
+        <li>Junqueira e Carneiro – <em>Histologia Básica</em>.</li>
+      </ul>
+    </section>
   </main>
-  <footer><p>Material educativo de Biologia – Tecido Nervoso</p><p>Desenvolvido para fins educacionais.</p></footer>
+
+  <footer>
+    <p>Material educativo de Biologia – Tecido Nervoso</p>
+    <p>Desenvolvido para fins educacionais.</p>
+  </footer>
+
   <script>
-    document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.tab,.tab-panel').forEach(el=>el.classList.remove('active'));button.classList.add('active');document.getElementById(button.dataset.tab).classList.add('active')}));
-    document.getElementById('showAnswer').addEventListener('click',()=>document.getElementById('answer').classList.toggle('show'));
-    document.getElementById('animateSynapse').addEventListener('click',()=>{const el=document.getElementById('synapseAnimation');el.classList.remove('play');void el.offsetWidth;el.classList.add('play')});
-    document.getElementById('animateImpulse').addEventListener('click',()=>{const el=document.getElementById('impulseTrack');el.classList.remove('active');void el.offsetWidth;el.classList.add('active')});
-    const quiz=document.getElementById('quiz'), result=document.getElementById('result');
-    quiz.addEventListener('submit',event=>{event.preventDefault();let score=0;for(let i=1;i<=5;i++){const selected=quiz.querySelector(`input[name=q${i}]:checked`);if(selected&&selected.value==='1')score++}result.textContent=`Você acertou ${score} de 5 questões.`});
-    document.getElementById('resetQuiz').addEventListener('click',()=>{quiz.reset();result.textContent=''});
+    document.querySelectorAll('.tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+
+    document.getElementById('showAnswer').addEventListener('click', () => {
+      document.getElementById('answer').classList.toggle('show');
+    });
+
+    document.getElementById('animateSynapse').addEventListener('click', () => {
+      const el = document.getElementById('synapseAnimation');
+      el.classList.remove('play');
+      void el.offsetWidth;
+      el.classList.add('play');
+    });
+
+    document.getElementById('animateImpulse').addEventListener('click', () => {
+      const el = document.getElementById('impulseTrack');
+      el.classList.remove('active');
+      void el.offsetWidth;
+      el.classList.add('active');
+    });
+
+    const quiz = document.getElementById('quiz');
+    const result = document.getElementById('result');
+
+    quiz.addEventListener('submit', event => {
+      event.preventDefault();
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const selected = quiz.querySelector(`input[name=q${i}]:checked`);
+        if (selected && selected.value === '1') score++;
+      }
+      result.textContent = `Você acertou ${score} de 5 questões.`;
+    });
+
+    document.getElementById('resetQuiz').addEventListener('click', () => {
+      quiz.reset();
+      result.textContent = '';
+    });
   </script>
 </body>
 </html>
