@@ -1,67 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatório Nmap — scanme.nmap.org</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Verdália — Sobreviva até o Amanhecer</title>
+  <style>
+    html, body { margin: 0; overflow: hidden; background: #07090a; }
+    canvas { display: block; touch-action: none; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <p class="eyebrow">RELATÓRIO DE VARREDURA</p>
-      <h1>scanme.nmap.org</h1>
-      <p class="meta">Nmap 7.91 · 18 de março de 2021 · 45.33.32.156</p>
-      <div class="status"><span></span> Host ativo</div>
-    </header>
-
-    <section class="summary" aria-label="Resumo da varredura">
-      <article><strong>1.000</strong><span>Portas verificadas</span></article>
-      <article><strong>993</strong><span>Portas fechadas</span></article>
-      <article><strong>7</strong><span>Portas relevantes</span></article>
-      <article><strong>41,89 s</strong><span>Tempo total</span></article>
-    </section>
-
-    <section class="panel">
-      <h2>Portas TCP</h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Porta</th><th>Estado</th><th>Serviço</th><th>Método</th></tr></thead>
-          <tbody>
-            <tr><td>22/tcp</td><td><span class="tag open">Aberta</span></td><td>SSH</td><td>Detecção por tabela</td></tr>
-            <tr><td>80/tcp</td><td><span class="tag open">Aberta</span></td><td>HTTP</td><td>Detecção por tabela</td></tr>
-            <tr><td>135/tcp</td><td><span class="tag filtered">Filtrada</span></td><td>MSRPC</td><td>Detecção por tabela</td></tr>
-            <tr><td>139/tcp</td><td><span class="tag filtered">Filtrada</span></td><td>NetBIOS Session Service</td><td>Detecção por tabela</td></tr>
-            <tr><td>445/tcp</td><td><span class="tag filtered">Filtrada</span></td><td>Microsoft-DS</td><td>Detecção por tabela</td></tr>
-            <tr><td>9929/tcp</td><td><span class="tag open">Aberta</span></td><td>Nping Echo</td><td>Detecção por tabela</td></tr>
-            <tr><td>31337/tcp</td><td><span class="tag open">Aberta</span></td><td>Elite</td><td>Detecção por tabela</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="grid">
-      <article class="panel"><h2>Endereço</h2><p><strong>IP:</strong> 45.33.32.156</p><p><strong>Nome:</strong> scanme.nmap.org</p><p><strong>Tipo:</strong> IPv4 / PTR</p></article>
-      <article class="panel"><h2>Resultado</h2><p><strong>Hosts ativos:</strong> 1</p><p><strong>Hosts inativos:</strong> 0</p><p><strong>Saída:</strong> Sucesso</p></article>
-    </section>
-
-    <section class="panel source">
-      <div class="source-heading"><h2>Dados originais</h2><button id="copyXml" type="button">Copiar XML</button></div>
-      <pre id="nmapXml">&lt;nmaprun scanner=&quot;nmap&quot; start=&quot;1616092999&quot; version=&quot;7.91&quot;&gt;
-  &lt;host&gt;
-    &lt;address addr=&quot;45.33.32.156&quot; addrtype=&quot;ipv4&quot;/&gt;
-    &lt;ports&gt;
-      &lt;port protocol=&quot;tcp&quot; portid=&quot;22&quot;&gt;
-        &lt;state state=&quot;open&quot;/&gt;&lt;service name=&quot;ssh&quot;/&gt;
-      &lt;/port&gt;
-      &lt;port protocol=&quot;tcp&quot; portid=&quot;80&quot;&gt;
-        &lt;state state=&quot;open&quot;/&gt;&lt;service name=&quot;http&quot;/&gt;
-      &lt;/port&gt;
-    &lt;/ports&gt;
-  &lt;/host&gt;
-&lt;/nmaprun&gt;</pre>
-    </section>
-  </main>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
